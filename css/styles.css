@@ -35,6 +35,8 @@ ul {
 }
 .header-colors {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -68,6 +70,19 @@ ul {
   display: flex;
   gap: 40px;
   padding: 24px 0;
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-nav::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 .page-nav .link {
   color: #2e2f42;
@@ -90,6 +105,7 @@ ul {
 .page-contact {
   display: flex;
   gap: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-contact .link {
   color: #434455;
@@ -107,6 +123,11 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
 }
 .header-primary {
   color: #ffffff;
